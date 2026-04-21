@@ -237,10 +237,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Servicess\CharacterService.cs" />
     <Compile Include="Config\BotConfig.cs" />
+    <Compile Include="Servicess\DatabaseInitializer.cs" />
     <Compile Include="Data\AppDbContext.cs" />
     <Compile Include="Data\Repository\CharacterRepository.cs" />
     <Compile Include="Data\Repository\ICharacterRepository.cs" />
+    <Compile Include="Data\Repository\ITeamRepository.cs" />
+    <Compile Include="Data\Repository\TeamRepository.cs" />
+    <Compile Include="Servicess\ICharacterService.cs" />
     <Compile Include="Models\DataBase\Artifact.cs" />
     <Compile Include="Models\DataBase\Character.cs" />
     <Compile Include="Models\DataBase\CharacterArtifact.cs" />
