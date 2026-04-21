@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using GenshinBot.Data;
 
 
-namespace GenshinBot.Services
+namespace GenshinBot.Servicess
 {
     public static class DatabaseInitializer
     {
@@ -28,7 +28,7 @@ namespace GenshinBot.Services
             }
         }
 
-        private static async Tasc SeedDataAsync(AppDbContext context)
+        private static async Task SeedDataAsync(AppDbContext context)
         {
             // Добавте здесь код для первоначального заполнения базы
             // Вы можете использовать SQL скрипты или С# код
@@ -36,9 +36,9 @@ namespace GenshinBot.Services
             Console.WriteLine("Seeding database...");
 
             // Пример добавления элементов
-            var pyro = new Models.Database.Element { Name = "Пиро", color = "#FF0000" };
-            var hydro = new Models.Database.Element { Name = "Гидро", color = "#0000FF" };
-            var electro = new Models.Database.Element { Name = "Электро", color = "#800080" };
+            var pyro = new Models.DataBase.Element { ElementName = "Пиро", ElementColor = "#FF0000" };
+            var hydro = new Models.DataBase.Element { ElementName = "Гидро", ElementColor = "#0000FF" };
+            var electro = new Models.DataBase.Element { ElementName = "Электро", ElementColor = "#800080" };
 
             context.Elements.AddRange(pyro,hydro,electro);
             await context.SaveChangesAsync();

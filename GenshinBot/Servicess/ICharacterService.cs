@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenshinBot.Services
+namespace GenshinBot.Servicess
 {
     public interface ICharacterService
     {
-        Task<Character?> GetCharacterAsync(string name);
+        Task<Character> GetCharacterAsync(string name);
         Task<List<Character>> GetAllCharactersAsync();
         Task<List<Team>> GetCharacterTeamsAsync(string characterName);
         Task<string> GetCharacterInfoAsync(string characterName);
