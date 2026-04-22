@@ -25,7 +25,7 @@ namespace GenshinBot.Models.DataBase
         public string TeamPlayStyle {  get; set; }
 
         [Range(1,5)]
-        public int TeamDifficulty {  get; set; }
+        public int? TeamDifficulty {  get; set; }
 
         [MaxLength(200)]
         public string TeamEnergyRechargeRequirement {  get; set; }
